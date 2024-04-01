@@ -6,24 +6,88 @@
   <title>AI Macro Nutrient Scanner</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #0a0a0a;
+      color: #fff;
     }
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+      background: linear-gradient(to right, #1a237e, #42389d);
+      padding: 40px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1617041391931-964c3450ef8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+      background-size: cover;
+      opacity: 0.3;
+      z-index: -1;
     }
     main {
-      padding: 20px;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
     }
     footer {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
+    }
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .feature img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    .feature-content h3 {
+      margin-top: 0;
+    }
+    .feature-content p {
+      opacity: 0.8;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #42389d;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #1a237e;
     }
   </style>
 </head>
@@ -35,17 +99,31 @@
     <h2>Revolutionizing Nutritional Analysis</h2>
     <p>Introducing our cutting-edge AI Macro Nutrient Scanner, a revolutionary tool that takes the guesswork out of tracking your dietary intake. With its advanced machine learning algorithms, our scanner can accurately analyze the macro nutrient content of your meals, providing you with detailed insights into your daily calorie, protein, carbohydrate, and fat consumption.</p>
     <h2>Features</h2>
-    <ul>
-      <li>Simple and intuitive interface</li>
-      <li>Highly accurate macro nutrient analysis</li>
-      <li>Personalized recommendations for optimal nutrition</li>
-      <li>Integration with popular fitness apps and trackers</li>
-    </ul>
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1490645935967-88a041f4986b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Simple Interface">
+      <div class="feature-content">
+        <h3>Simple and Intuitive Interface</h3>
+        <p>Our user-friendly interface ensures a seamless experience, making it easy to track your meals and access valuable nutritional data.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1484723091739-30a4a8944953?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="Accurate Analysis">
+      <div class="feature-content">
+        <h3>Highly Accurate Macro Nutrient Analysis</h3>
+        <p>Our advanced AI algorithms ensure precise macro nutrient analysis, providing you with reliable data to make informed dietary decisions.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1505576475800-e7c637ef842e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Personalized Recommendations">
+      <div class="feature-content">
+        <h3>Personalized Recommendations</h3>
+        <p>Get tailored recommendations based on your unique nutritional needs and lifestyle to help you achieve your health and fitness goals.</p>
+      </div>
+    </div>
     <h2>Subscribe Now</h2>
     <p>Sign up for our free 14-day trial and experience the power of our AI Macro Nutrient Scanner. After the trial period, subscribe to our affordable monthly plan to continue enjoying the benefits of this game-changing technology.</p>
     <form>
-      <label for="email">Enter your email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
       <button type="submit">Subscribe</button>
     </form>
   </main>
